@@ -304,6 +304,67 @@ h5 {
   border: 1px solid var(--line);
   border-radius: 22px;
   box-shadow: var(--shadow);
+  cursor: default;
+}
+
+.about-card,
+.skill-card,
+.project-card,
+.timeline-card,
+.cert-card,
+.achievement-card,
+.repo-card,
+.interest-card,
+.contact-box,
+.resume-box {
+  transition: transform 0.3s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+@media (hover: hover) {
+  .about-card:hover,
+  .skill-card:hover,
+  .project-card:hover,
+  .timeline-card:hover,
+  .cert-card:hover,
+  .achievement-card:hover,
+  .repo-card:hover,
+  .interest-card:hover,
+  .contact-box:hover,
+  .resume-box:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    border-color: rgba(110, 198, 255, 0.48);
+    box-shadow: 0 24px 56px rgba(6, 18, 26, 0.58), 0 0 24px rgba(110, 198, 255, 0.08);
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-card,
+  .skill-card,
+  .project-card,
+  .timeline-card,
+  .cert-card,
+  .achievement-card,
+  .repo-card,
+  .interest-card,
+  .contact-box,
+  .resume-box {
+    transition: none;
+  }
+
+  .about-card:hover,
+  .skill-card:hover,
+  .project-card:hover,
+  .timeline-card:hover,
+  .cert-card:hover,
+  .achievement-card:hover,
+  .repo-card:hover,
+  .interest-card:hover,
+  .contact-box:hover,
+  .resume-box:hover {
+    transform: none;
+  }
 }
 
 .about-card {
