@@ -31,6 +31,7 @@ body {
     linear-gradient(180deg, var(--bg) 0%, #0c1823 100%);
   color: var(--text);
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -68,6 +69,12 @@ h5 {
 .container {
   width: min(1150px, calc(100% - 32px));
   margin: 0 auto;
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: min(1150px, calc(100% - 20px));
+  }
 }
 
 .section {
@@ -725,6 +732,73 @@ h5 {
     flex-direction: column;
     justify-content: center;
     padding: 18px 0;
+  }
+
+  .nav-links {
+    justify-content: center;
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    position: sticky;
+  }
+
+  .nav {
+    min-height: auto;
+    padding: 14px 0 12px;
+  }
+
+  .brand-wrap {
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+  }
+
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+    font-size: 0.72rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    font-size: 0.75rem;
+    gap: 8px 14px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 42px 0 24px;
+  }
+
+  .hero-badge {
+    max-width: 100%;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    padding: 10px 14px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.4rem, 16vw, 4.2rem);
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .social-row {
+    flex-wrap: wrap;
+    gap: 8px 12px;
   }
 }
 
